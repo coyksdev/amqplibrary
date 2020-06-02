@@ -1,6 +1,6 @@
 {
   "name": "amqplibrary-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple RabbitMQ library that built on top of amqplib written in Typescript",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -16,7 +16,19 @@
     "build": "npm run clean && tsc",
     "test": "jest --watchAll --no-cache --coverage --runInBand --detectOpenHandles"
   },
-  "keywords": [],
+  "keywords": [
+    "amqplibrary-ts",
+    "amqp",
+    "amqplib",
+    "rabbitmq",
+    "publish",
+    "subscribe",
+    "send",
+    "listen",
+    "request",
+    "reply",
+    "rpc"
+  ],
   "author": "Gerald Campana",
   "license": "MIT",
   "repository": {
