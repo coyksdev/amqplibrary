@@ -1,0 +1,35 @@
+{
+  "name": "amqplibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "clean": "del ./build/*",
+    "build": "npm run clean && tsc",
+    "test": "jest --watchAll --no-cache --coverage --runInBand --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "del-cli": "^3.0.1",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@types/amqplib": "^0.5.13",
+    "@types/uuid": "^8.0.0",
+    "amqplib": "^0.5.6",
+    "uuid": "^8.1.0"
+  }
+}
