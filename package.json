@@ -17,8 +17,12 @@
     "test": "jest --watchAll --no-cache --coverage --runInBand --detectOpenHandles"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Gerald Campana",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/campanagerald/amqplibrary.git"
+  },
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "del-cli": "^3.0.1",
