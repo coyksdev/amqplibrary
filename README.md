@@ -1,11 +1,11 @@
 #### INSTALLATION
 
-npm install --save amqplibrary
+npm install --save amqplibrary-ts
 
 #### Setting up a connection
 
 ```javascript
-import { amqp } from 'amqplibrary';
+import { amqp } from 'amqplibrary-ts';
 
 async function main() {
     await amqp.connect('amqp://localhost:5672');
@@ -19,7 +19,7 @@ async function main() {
 ### request-reply
 
 ```javascript
-import { Reply, Request } from 'amqplibrary';
+import { Reply, Request } from 'amqplibrary-ts';
 ```
 
 Process A:
@@ -59,7 +59,7 @@ console.log(response) // 25
 ### send - listen
 
 ```javascript
-import { Listener, Sender } from 'amqplibrary';
+import { Listener, Sender } from 'amqplibrary-ts';
 ```
 
 Process A:
@@ -96,7 +96,7 @@ new Sender<Message>('send-listen-queue')
 ### publish - subscribe
 
 ```javascript
-import { Subscriber, Publisher } from 'amqplibrary';
+import { Subscriber, Publisher } from 'amqplibrary-ts';
 ```
 
 Process A:
