@@ -5,11 +5,11 @@ npm install --save amqplibrary
 #### Setting up a connection
 
 ```javascript
-    import { amqp } from 'amqplibrary';
+import { amqp } from 'amqplibrary';
 
-    async function main() {
-        await amqp.connect('amqp://localhost:5672');
-    }
+async function main() {
+    await amqp.connect('amqp://localhost:5672');
+}
 ```
 
 ### Usage
@@ -17,6 +17,10 @@ npm install --save amqplibrary
 ---
 
 ### request-reply
+
+```javascript
+import { Reply, Request } from 'amqplibrary';
+```
 
 Process A:
 
@@ -55,6 +59,10 @@ console.log(response) // 25
 ### send - listen
 
 ```javascript
+import { Listener, Sender } from 'amqplibrary';
+```
+
+```javascript
 interface Message {
     greet: string
 }
@@ -84,6 +92,10 @@ new Sender<Message>('send-listen-queue')
 ---
 
 ### publish - subscribe
+
+```javascript
+import { Subscriber, Publisher } from 'amqplibrary';
+```
 
 Process A:
 
@@ -121,6 +133,6 @@ new Subscriber<Message>('broadcast', 'broadcast-queue2')
 Process C:
 
 ```javascript
-  new Publisher<Message>('broadcast')
+new Publisher<Message>('broadcast')
             .send({ greet: 'Hello, this is a broadcast message' });
 ```
