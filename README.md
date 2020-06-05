@@ -107,7 +107,10 @@ interface Message {
     greet: string
 }
 
-new Subscriber<Message>('broadcast', 'broadcast-queue1')
+const exchange = 'broadcast';
+const queue = 'broadcast-queue1';
+
+new Subscriber<Message>(exchange, queue)
     .listen(async (message) => {
         console.log(message.data.greet); // 'Hello, this is a broadcast message' 
 
@@ -123,7 +126,10 @@ interface Message {
     greet: string
 }
 
-new Subscriber<Message>('broadcast', 'broadcast-queue2')
+const exchange = 'broadcast';
+const queue = 'broadcast-queue2';
+
+new Subscriber<Message>(exchange, queue)
     .listen(async (message) => {
         console.log(message.data.greet); // 'Hello, this is a broadcast message' 
 
@@ -135,6 +141,9 @@ new Subscriber<Message>('broadcast', 'broadcast-queue2')
 Process C:
 
 ```javascript
-new Publisher<Message>('broadcast')
+
+const exchange = 'broadcast';
+
+new Publisher<Message>(exchange)
             .send({ greet: 'Hello, this is a broadcast message' });
 ```
