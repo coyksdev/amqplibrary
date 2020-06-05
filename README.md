@@ -142,6 +142,10 @@ Process C:
 
 ```javascript
 
+interface Message {
+    greet: string
+}
+
 const exchange = 'broadcast';
 
 new Publisher<Message>(exchange)
